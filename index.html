@@ -334,8 +334,7 @@
     position: relative; overflow: hidden;
   }
   .equipo-visual svg {
-    width: 100%; height: 100%;
-    position: absolute; inset: 0;
+    /* individual SVGs control their own size */
   }
   .equipo-visual::after {
     content: '';
@@ -837,7 +836,7 @@
           <circle cx="288" cy="272" r="28" fill="#3d8f5c"/>
         </svg>
     <div class="hero-actions" style="position:relative;z-index:1;">
-      <a href="https://wa.me/543435052142?text=Hola%2C+me+comunico+desde+su+sitio+web.+Quisiera+consultar+sobre+sus+servicios." class="btn-primary">
+      <a href="https://wa.me/543435052142?text=Hola%2C+me+comunico+desde+el+sitio+web.+Quisiera+consultar+sobre+sus+servicios." class="btn-primary">
         💬 Consultá por WhatsApp
       </a>
       <a href="#servicios" class="btn-ghost">Ver servicios →</a>
@@ -998,74 +997,56 @@
 <!-- EQUIPOS -->
 <section id="equipos">
   <div class="section-tag">Con qué trabajamos</div>
-  <h2 class="section-title">Equipos &<br>Marcas</h2>
-  <p class="section-lead">Experiencia en las principales marcas del mercado de autoelevadores y maquinaria industrial.</p>
+  <h2 class="section-title">Equipos &<br>Sistemas</h2>
+  <p class="section-lead">Si tiene motor, hidráulica o transmisión, tenemos la experiencia para atenderlo. Sin importar la marca.</p>
 
   <div class="equipos-grid reveal">
     <!-- Toyota -->
     <div class="equipo-card">
       <div class="equipo-visual">
-        <svg viewBox="0 0 300 180" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
-          <rect width="300" height="180" fill="#141414"/>
-          <line x1="0" y1="60" x2="300" y2="60" stroke="#1c1c1c" stroke-width="1"/>
-          <line x1="0" y1="120" x2="300" y2="120" stroke="#1c1c1c" stroke-width="1"/>
-          <line x1="100" y1="0" x2="100" y2="180" stroke="#1c1c1c" stroke-width="1"/>
-          <line x1="200" y1="0" x2="200" y2="180" stroke="#1c1c1c" stroke-width="1"/>
-          <rect x="90" y="60" width="120" height="75" rx="5" fill="#1d4a2d"/>
-          <rect x="160" y="40" width="50" height="55" rx="4" fill="#2e6e45"/>
-          <rect x="166" y="46" width="38" height="28" rx="2" fill="#0a1f10" opacity="0.8"/>
-          <line x1="166" y1="58" x2="204" y2="58" stroke="#3d8f5c" stroke-width="1" opacity="0.5"/>
-          <rect x="74" y="18" width="12" height="120" rx="2" fill="#1d4a2d"/>
-          <rect x="86" y="18" width="6" height="120" rx="1" fill="#2e6e45"/>
-          <rect x="30" y="112" width="54" height="8" rx="2" fill="#c8c8c0"/>
-          <rect x="30" y="124" width="54" height="8" rx="2" fill="#c8c8c0"/>
-          <rect x="208" y="85" width="22" height="42" rx="4" fill="#142d1a"/>
-          <circle cx="118" cy="140" r="22" fill="#0d0d0d" stroke="#2e6e45" stroke-width="4"/>
-          <circle cx="118" cy="140" r="10" fill="#1d4a2d"/>
-          <circle cx="118" cy="140" r="4" fill="#3d8f5c"/>
-          <circle cx="192" cy="140" r="22" fill="#0d0d0d" stroke="#2e6e45" stroke-width="4"/>
-          <circle cx="192" cy="140" r="10" fill="#1d4a2d"/>
-          <circle cx="192" cy="140" r="4" fill="#3d8f5c"/>
-          <rect x="0" y="162" width="300" height="4" fill="#1c1c1c"/>
+        <svg viewBox="0 0 120 90" xmlns="http://www.w3.org/2000/svg" style="width:140px;height:140px;">
+          <rect x="35" y="35" width="55" height="35" rx="3" fill="#2e6e45"/>
+          <rect x="66" y="22" width="24" height="26" rx="2" fill="#3d8f5c"/>
+          <rect x="69" y="25" width="18" height="14" rx="1" fill="#0d2e1a" opacity="0.6"/>
+          <rect x="28" y="13" width="5" height="50" rx="1" fill="#1d4a2d"/>
+          <rect x="33" y="13" width="2" height="50" rx="1" fill="#3d8f5c"/>
+          <rect x="14" y="55" width="20" height="4" rx="1" fill="#e8e8e0"/>
+          <rect x="14" y="62" width="20" height="4" rx="1" fill="#e8e8e0"/>
+          <rect x="90" y="45" width="10" height="20" rx="2" fill="#1d4a2d"/>
+          <circle cx="48" cy="73" r="9" fill="#141414" stroke="#3d8f5c" stroke-width="2"/>
+          <circle cx="48" cy="73" r="4" fill="#2e6e45"/>
+          <circle cx="83" cy="73" r="9" fill="#141414" stroke="#3d8f5c" stroke-width="2"/>
+          <circle cx="83" cy="73" r="4" fill="#2e6e45"/>
         </svg>
       </div>
       <div class="equipo-body">
-        <div class="equipo-type">Autoelevador</div>
-        <div class="equipo-name">Toyota</div>
-        <div class="equipo-info">Service preventivo y correctivo certificado. Repuestos originales disponibles.</div>
+        <div class="equipo-type">Cualquier marca</div>
+        <div class="equipo-name">Autoelevadores</div>
+        <div class="equipo-info">Eléctricos, a gas o diesel. Si levanta carga, lo atendemos.</div>
       </div>
     </div>
 
     <!-- Heli -->
     <div class="equipo-card">
       <div class="equipo-visual">
-        <svg viewBox="0 0 300 180" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
-          <rect width="300" height="180" fill="#141414"/>
-          <line x1="0" y1="60" x2="300" y2="60" stroke="#1c1c1c" stroke-width="1"/>
-          <line x1="0" y1="120" x2="300" y2="120" stroke="#1c1c1c" stroke-width="1"/>
-          <line x1="100" y1="0" x2="100" y2="180" stroke="#1c1c1c" stroke-width="1"/>
-          <line x1="200" y1="0" x2="200" y2="180" stroke="#1c1c1c" stroke-width="1"/>
-          <rect x="85" y="62" width="125" height="72" rx="5" fill="#8b2200"/>
-          <rect x="158" y="42" width="52" height="52" rx="4" fill="#b03000"/>
-          <rect x="164" y="48" width="40" height="26" rx="2" fill="#0a0a0a" opacity="0.7"/>
-          <rect x="72" y="20" width="11" height="118" rx="2" fill="#5a1800"/>
-          <rect x="83" y="20" width="5" height="118" rx="1" fill="#8b2200"/>
-          <rect x="28" y="110" width="52" height="8" rx="2" fill="#c8c8c0"/>
-          <rect x="28" y="122" width="52" height="8" rx="2" fill="#c8c8c0"/>
-          <rect x="208" y="84" width="20" height="42" rx="4" fill="#5a1800"/>
-          <circle cx="113" cy="140" r="21" fill="#0d0d0d" stroke="#b03000" stroke-width="4"/>
-          <circle cx="113" cy="140" r="9" fill="#8b2200"/>
-          <circle cx="113" cy="140" r="4" fill="#e05020"/>
-          <circle cx="190" cy="140" r="21" fill="#0d0d0d" stroke="#b03000" stroke-width="4"/>
-          <circle cx="190" cy="140" r="9" fill="#8b2200"/>
-          <circle cx="190" cy="140" r="4" fill="#e05020"/>
-          <rect x="0" y="162" width="300" height="4" fill="#1c1c1c"/>
+        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style="width:140px;height:140px;">
+          <rect x="20" y="30" width="60" height="40" rx="4" fill="#2e6e45"/>
+          <rect x="50" y="18" width="30" height="28" rx="3" fill="#3d8f5c"/>
+          <rect x="53" y="21" width="24" height="16" rx="2" fill="#0d2e1a" opacity="0.6"/>
+          <rect x="14" y="42" width="14" height="5" rx="1" fill="#e8e8e0"/>
+          <rect x="14" y="50" width="14" height="5" rx="1" fill="#e8e8e0"/>
+          <circle cx="32" cy="74" r="10" fill="#141414" stroke="#3d8f5c" stroke-width="2"/>
+          <circle cx="32" cy="74" r="4" fill="#2e6e45"/>
+          <circle cx="72" cy="74" r="10" fill="#141414" stroke="#3d8f5c" stroke-width="2"/>
+          <circle cx="72" cy="74" r="4" fill="#2e6e45"/>
+          <circle cx="88" cy="72" r="7" fill="#141414" stroke="#3d8f5c" stroke-width="1.5"/>
+          <circle cx="88" cy="72" r="3" fill="#2e6e45"/>
         </svg>
       </div>
       <div class="equipo-body">
-        <div class="equipo-type">Autoelevador</div>
-        <div class="equipo-name">Heli</div>
-        <div class="equipo-info">Reparación mecánica, hidráulica y eléctrica. Amplio stock de repuestos.</div>
+        <div class="equipo-type">Campo y obra</div>
+        <div class="equipo-name">Maquinaria Pesada</div>
+        <div class="equipo-info">Tractores, cosechadoras y equipos de construcción. Mecánica integral.</div>
       </div>
     </div>
 
@@ -1098,9 +1079,9 @@
         </svg>
       </div>
       <div class="equipo-body">
-        <div class="equipo-type">Maquinaria</div>
-        <div class="equipo-name">Maquinaria Agrícola</div>
-        <div class="equipo-info">Mecánica integral, hidráulica y transmisiones para equipos del campo.</div>
+        <div class="equipo-type">Equipos pesados</div>
+        <div class="equipo-name">Hidráulica</div>
+        <div class="equipo-info">Centrales, cilindros y válvulas en maquinaria industrial y de campo.</div>
       </div>
     </div>
 
@@ -1363,7 +1344,7 @@
         </div>
       </div>
 
-      <a href="https://wa.me/543435052142?text=Hola%2C+me+comunico+desde+su+sitio+web.+Quisiera+consultar+sobre+sus+servicios." class="wa-button">
+      <a href="https://wa.me/543435052142?text=Hola%2C+me+comunico+desde+el+sitio+web.+Quisiera+consultar+sobre+sus+servicios." class="wa-button">
         <span class="wa-icon">💬</span>
         Enviar mensaje por WhatsApp
       </a>
@@ -1387,7 +1368,7 @@
 
 
 <!-- Sticky WhatsApp Mobile CTA -->
-<a href="https://wa.me/543435052142?text=Hola%2C+me+comunico+desde+su+sitio+web.+Quisiera+consultar+sobre+sus+servicios." class="sticky-wa" target="_blank" aria-label="WhatsApp">
+<a href="https://wa.me/543435052142?text=Hola%2C+me+comunico+desde+el+sitio+web.+Quisiera+consultar+sobre+sus+servicios." class="sticky-wa" target="_blank" aria-label="WhatsApp">
   <svg viewBox="0 0 24 24" fill="white" style="width:28px;height:28px;">
     <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
   </svg>

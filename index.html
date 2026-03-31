@@ -1,0 +1,1221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MG Equipos Industriales | Autoelevadores — General Ramírez, Entre Ríos</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@300;400;500;600&family=Barlow+Condensed:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --green: #2e6e45;
+    --green-light: #3d8f5c;
+    --green-dim: #1d4a2d;
+    --orange: #e07b2a;
+    --bg: #0d0d0d;
+    --bg2: #141414;
+    --bg3: #1c1c1c;
+    --text: #e8e8e0;
+    --muted: #7a7a72;
+    --border: #2a2a2a;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Barlow', sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; width: 100%; z-index: 100;
+    padding: 18px 48px;
+    display: flex; align-items: center; justify-content: space-between;
+    background: rgba(13,13,13,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-logo {
+    display: flex; align-items: center; gap: 14px;
+    text-decoration: none;
+  }
+  .nav-logo-box {
+    width: 42px; height: 42px;
+    background: var(--green);
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 18px; color: #fff;
+    letter-spacing: 1px;
+  }
+  .nav-logo-text {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 600; font-size: 13px;
+    letter-spacing: 2px; text-transform: uppercase;
+    color: var(--text);
+    line-height: 1.3;
+  }
+  .nav-logo-text span { color: var(--muted); font-weight: 400; }
+  .nav-links {
+    display: flex; gap: 36px; list-style: none;
+  }
+  .nav-links a {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 13px; letter-spacing: 2px; text-transform: uppercase;
+    color: var(--muted); text-decoration: none;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--text); }
+  .nav-cta {
+    background: var(--green); color: #fff !important;
+    padding: 8px 20px !important;
+    font-size: 12px !important;
+  }
+  .nav-cta:hover { background: var(--green-light); color: #fff !important; }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    display: grid; grid-template-columns: 1fr 1fr;
+    padding-top: 80px;
+    overflow: hidden;
+  }
+  .hero-left {
+    display: flex; flex-direction: column; justify-content: center;
+    padding: 80px 48px 80px 64px;
+    position: relative;
+  }
+  .hero-eyebrow {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 12px; letter-spacing: 4px; text-transform: uppercase;
+    color: var(--green-light); margin-bottom: 24px;
+    display: flex; align-items: center; gap: 12px;
+  }
+  .hero-eyebrow::before {
+    content: '';
+    display: block; width: 32px; height: 1px;
+    background: var(--green-light);
+  }
+  .hero-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(64px, 7vw, 110px);
+    line-height: 0.92;
+    letter-spacing: 2px;
+    color: var(--text);
+    margin-bottom: 8px;
+  }
+  .hero-title .accent { color: var(--green-light); }
+  .hero-subtitle {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(26px, 3vw, 44px);
+    color: var(--muted);
+    letter-spacing: 3px;
+    margin-bottom: 32px;
+  }
+  .hero-desc {
+    font-size: 15px; color: #a0a099;
+    max-width: 420px; line-height: 1.7;
+    margin-bottom: 48px;
+    font-weight: 300;
+  }
+  .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; }
+  .btn-primary {
+    background: var(--green);
+    color: #fff; text-decoration: none;
+    padding: 14px 32px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 13px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase;
+    display: inline-flex; align-items: center; gap: 10px;
+    transition: background 0.2s, transform 0.15s;
+  }
+  .btn-primary:hover { background: var(--green-light); transform: translateY(-1px); }
+  .btn-ghost {
+    border: 1px solid var(--border);
+    color: var(--muted); text-decoration: none;
+    padding: 14px 32px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 13px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase;
+    display: inline-flex; align-items: center; gap: 10px;
+    transition: border-color 0.2s, color 0.2s;
+  }
+  .btn-ghost:hover { border-color: var(--green); color: var(--text); }
+
+  .hero-right {
+    position: relative;
+    background: var(--bg2);
+    overflow: hidden;
+  }
+  .hero-grid-bg {
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(var(--border) 1px, transparent 1px),
+      linear-gradient(90deg, var(--border) 1px, transparent 1px);
+    background-size: 48px 48px;
+    opacity: 0.5;
+  }
+  .hero-image-panel {
+    position: absolute; inset: 0;
+    display: flex; align-items: center; justify-content: center;
+    padding: 32px 24px;
+  }
+  .hero-forklift-card {
+    width: 72%; max-width: 340px;
+    background: var(--bg3);
+    border: 1px solid var(--border);
+    overflow: hidden;
+    animation: float 4s ease-in-out infinite;
+  }
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+  .hero-card-img {
+    width: 100%; height: 180px;
+    background: linear-gradient(135deg, var(--green-dim) 0%, #111 60%);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 72px;
+    position: relative; overflow: hidden;
+  }
+  .hero-card-img::after {
+    content: '';
+    position: absolute; inset: 0;
+    background: linear-gradient(to top, var(--bg3), transparent 50%);
+  }
+  .hero-card-body { padding: 20px 24px; }
+  .hero-card-tag {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 11px; letter-spacing: 3px; text-transform: uppercase;
+    color: var(--green-light); margin-bottom: 8px;
+  }
+  .hero-card-name {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 28px; letter-spacing: 1px; color: var(--text);
+  }
+  .hero-card-loc {
+    font-size: 13px; color: var(--muted);
+    display: flex; align-items: center; gap: 6px; margin-top: 6px;
+  }
+
+  .hero-stats { display: none; }
+
+  /* ── STATS BAND ── */
+  .stats-band {
+    background: var(--bg2);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .band-stat {
+    padding: 36px 40px;
+    border-right: 1px solid var(--border);
+    position: relative;
+  }
+  .band-stat:last-child { border-right: none; }
+  .band-stat-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 52px; line-height: 1;
+    color: var(--text); display: block;
+  }
+  .band-stat-num em { color: var(--green-light); font-style: normal; }
+  .band-stat-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 12px; letter-spacing: 2px; text-transform: uppercase;
+    color: var(--muted); margin-top: 6px; display: block;
+  }
+  .band-stat-desc { font-size: 13px; color: #5a5a52; margin-top: 4px; line-height: 1.4; }
+
+  /* ── SECTION BASE ── */
+  section { padding: 96px 64px; }
+  .section-tag {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 11px; letter-spacing: 4px; text-transform: uppercase;
+    color: var(--green-light); margin-bottom: 12px;
+    display: flex; align-items: center; gap: 12px;
+  }
+  .section-tag::before {
+    content: ''; display: block;
+    width: 24px; height: 1px; background: var(--green-light);
+  }
+  .section-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(40px, 5vw, 72px);
+    line-height: 0.95; letter-spacing: 1px;
+    color: var(--text); margin-bottom: 16px;
+  }
+  .section-lead {
+    font-size: 15px; color: var(--muted);
+    max-width: 520px; line-height: 1.75; font-weight: 300;
+  }
+
+  /* ── SERVICES ── */
+  #servicios { background: var(--bg2); }
+  .services-layout {
+    display: grid; grid-template-columns: 340px 1fr;
+    gap: 80px; align-items: start; margin-top: 64px;
+  }
+  .service-cards { display: flex; flex-direction: column; gap: 2px; }
+  .service-card {
+    background: var(--bg3);
+    border: 1px solid var(--border);
+    padding: 28px 32px;
+    cursor: pointer;
+    transition: border-color 0.2s, background 0.2s;
+    display: flex; align-items: flex-start; gap: 20px;
+  }
+  .service-card:hover, .service-card.active {
+    border-color: var(--green);
+    background: rgba(46,110,69,0.07);
+  }
+  .service-card.active .svc-num { color: var(--green-light); }
+  .svc-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 36px; color: var(--border);
+    line-height: 1; transition: color 0.2s;
+    min-width: 48px;
+  }
+  .svc-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 18px; font-weight: 600; letter-spacing: 1px;
+    color: var(--text); margin-bottom: 4px;
+  }
+  .svc-desc { font-size: 13px; color: var(--muted); line-height: 1.6; }
+
+  .service-feature {
+    background: var(--bg3);
+    border: 1px solid var(--border);
+    padding: 48px;
+    position: relative; overflow: hidden;
+  }
+  .service-feature::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0; height: 3px;
+    background: var(--green);
+  }
+  .feature-icon { font-size: 64px; margin-bottom: 24px; opacity: 0.9; }
+  .feature-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 48px; letter-spacing: 1px; color: var(--text);
+    margin-bottom: 16px;
+  }
+  .feature-body { font-size: 15px; color: #9a9a92; line-height: 1.8; font-weight: 300; }
+  .feature-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 28px; }
+  .tag {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
+    color: var(--green-light);
+    border: 1px solid rgba(61,143,92,0.3);
+    padding: 5px 12px;
+  }
+
+  /* ── EQUIPOS ── */
+  #equipos { background: var(--bg); }
+  .equipos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px; margin-top: 64px;
+  }
+  .equipo-card {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    overflow: hidden;
+    transition: transform 0.2s, border-color 0.2s;
+    cursor: pointer;
+  }
+  .equipo-card:hover { transform: translateY(-4px); border-color: var(--green-dim); }
+  .equipo-visual {
+    height: 200px;
+    background: linear-gradient(135deg, var(--bg3) 0%, var(--bg2) 100%);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 60px; position: relative; overflow: hidden;
+  }
+  .equipo-visual::after {
+    content: '';
+    position: absolute; bottom: 0; left: 0; right: 0; height: 40%;
+    background: linear-gradient(to top, var(--bg2), transparent);
+  }
+  .equipo-body { padding: 20px 24px; }
+  .equipo-type {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 11px; letter-spacing: 3px; text-transform: uppercase;
+    color: var(--green-light); margin-bottom: 6px;
+  }
+  .equipo-name {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 26px; letter-spacing: 1px; color: var(--text);
+    margin-bottom: 8px;
+  }
+  .equipo-info { font-size: 13px; color: var(--muted); line-height: 1.5; }
+
+  /* ── COVERAGE ── */
+  #cobertura {
+    background: var(--bg2);
+    position: relative; overflow: hidden;
+  }
+  .coverage-layout {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 80px; align-items: center; margin-top: 64px;
+  }
+  .coverage-map {
+    background: var(--bg3);
+    border: 1px solid var(--border);
+    height: 420px;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    position: relative; overflow: hidden;
+    font-size: 80px;
+  }
+  .coverage-map::before {
+    content: '';
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(var(--border) 1px, transparent 1px),
+      linear-gradient(90deg, var(--border) 1px, transparent 1px);
+    background-size: 32px 32px;
+  }
+  .coverage-map-inner { position: relative; text-align: center; }
+  .coverage-map-inner p {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 18px; letter-spacing: 2px;
+    color: var(--green-light); margin-top: 8px;
+  }
+  .coverage-pulse {
+    position: absolute; top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 16px; height: 16px;
+    background: var(--green);
+    border-radius: 50%;
+  }
+  .coverage-pulse::before, .coverage-pulse::after {
+    content: '';
+    position: absolute; inset: -12px;
+    border: 2px solid var(--green);
+    border-radius: 50%;
+    animation: pulse 2s ease-out infinite;
+  }
+  .coverage-pulse::after { animation-delay: 1s; }
+  @keyframes pulse {
+    0% { transform: scale(0.5); opacity: 1; }
+    100% { transform: scale(2.5); opacity: 0; }
+  }
+
+  .coverage-info { display: flex; flex-direction: column; gap: 24px; }
+  .coverage-item {
+    display: flex; gap: 20px; align-items: flex-start;
+    padding: 24px 28px;
+    background: var(--bg3); border: 1px solid var(--border);
+  }
+  .coverage-icon { font-size: 28px; min-width: 40px; }
+  .coverage-item-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 16px; font-weight: 600; letter-spacing: 1px;
+    color: var(--text); margin-bottom: 4px;
+  }
+  .coverage-item-desc { font-size: 13px; color: var(--muted); line-height: 1.5; }
+
+  /* ── CONTACT ── */
+  #contacto { background: var(--bg); }
+  .contact-layout {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 80px; align-items: start; margin-top: 64px;
+  }
+  .contact-box {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    padding: 48px; position: relative; overflow: hidden;
+  }
+  .contact-box::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0; height: 3px;
+    background: linear-gradient(90deg, var(--green), var(--green-light));
+  }
+  .contact-box-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 36px; letter-spacing: 1px; color: var(--text);
+    margin-bottom: 8px;
+  }
+  .contact-box-desc { font-size: 14px; color: var(--muted); margin-bottom: 32px; line-height: 1.6; }
+  .contact-detail {
+    display: flex; align-items: center; gap: 16px;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .contact-detail:last-of-type { border-bottom: none; }
+  .contact-detail-icon { font-size: 20px; min-width: 32px; }
+  .contact-detail-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
+    color: var(--muted); margin-bottom: 2px;
+  }
+  .contact-detail-val { font-size: 15px; color: var(--text); }
+
+  .wa-button {
+    display: flex; align-items: center; gap: 14px;
+    background: #25D366; color: #fff; text-decoration: none;
+    padding: 18px 32px; margin-top: 32px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 15px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase;
+    transition: background 0.2s, transform 0.15s;
+  }
+  .wa-button:hover { background: #1fba59; transform: translateY(-2px); }
+  .wa-icon { font-size: 22px; }
+
+  .contact-ig {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    padding: 48px;
+    display: flex; flex-direction: column;
+    align-items: flex-start;
+  }
+  .ig-handle {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 42px; letter-spacing: 1px; color: var(--text);
+    margin-bottom: 8px;
+  }
+  .ig-meta { font-size: 13px; color: var(--muted); margin-bottom: 28px; }
+  .ig-preview-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 4px; width: 100%; margin-bottom: 24px;
+  }
+  .ig-thumb {
+    aspect-ratio: 1;
+    background: var(--bg3);
+    border: 1px solid var(--border);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 28px; color: var(--muted);
+    overflow: hidden;
+  }
+  .ig-link {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 13px; letter-spacing: 2px; text-transform: uppercase;
+    color: var(--green-light); text-decoration: none;
+    display: flex; align-items: center; gap: 8px;
+    border-bottom: 1px solid rgba(61,143,92,0.3);
+    padding-bottom: 2px;
+    transition: color 0.2s;
+  }
+  .ig-link:hover { color: var(--text); }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--bg2);
+    border-top: 1px solid var(--border);
+    padding: 48px 64px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .footer-brand {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 22px; letter-spacing: 2px; color: var(--text);
+  }
+  .footer-brand span { color: var(--green-light); }
+  .footer-info { font-size: 13px; color: var(--muted); }
+  .footer-copy { font-size: 12px; color: var(--border); text-align: right; }
+
+  /* ── DIVIDER ── */
+  .h-rule {
+    border: none; border-top: 1px solid var(--border);
+    margin: 0;
+  }
+
+  /* ── SCROLL REVEAL ── */
+  .reveal {
+    opacity: 0; transform: translateY(24px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .reveal.visible { opacity: 1; transform: none; }
+
+  /* ── MAP ── */
+  .map-embed {
+    width: 100%; height: 460px;
+    border: 1px solid var(--border);
+    filter: grayscale(0.4) contrast(1.05);
+    display: block;
+  }
+  .map-wrapper {
+    position: relative;
+    margin-top: 64px;
+  }
+  .map-badge {
+    position: absolute; top: 20px; left: 20px; z-index: 2;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    padding: 14px 20px;
+    display: flex; align-items: center; gap: 12px;
+  }
+  .map-badge-dot {
+    width: 10px; height: 10px; border-radius: 50%;
+    background: var(--green-light);
+    box-shadow: 0 0 0 4px rgba(61,143,92,0.2);
+    flex-shrink: 0;
+  }
+  .map-badge-text { font-size: 13px; color: var(--text); line-height: 1.4; }
+  .map-badge-text small { color: var(--muted); font-size: 12px; }
+
+  /* ── INSTAGRAM FEED ── */
+  #instagram { background: var(--bg); }
+  .ig-feed-wrapper { margin-top: 48px; }
+  .ig-header {
+    display: flex; align-items: center; justify-content: space-between;
+    margin-bottom: 24px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border);
+  }
+  .ig-profile-info { display: flex; align-items: center; gap: 16px; }
+  .ig-avatar {
+    width: 52px; height: 52px;
+    background: var(--green-dim);
+    border-radius: 50%;
+    border: 2px solid var(--green);
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 20px; color: #fff;
+  }
+  .ig-name {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 600; font-size: 16px; letter-spacing: 1px;
+    color: var(--text);
+  }
+  .ig-stats-row { font-size: 13px; color: var(--muted); margin-top: 2px; }
+  .ig-open-btn {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 12px; letter-spacing: 2px; text-transform: uppercase;
+    color: var(--green-light);
+    border: 1px solid rgba(61,143,92,0.3);
+    padding: 10px 20px;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .ig-open-btn:hover { background: rgba(61,143,92,0.1); color: var(--text); }
+
+  /* Behold widget container */
+  .behold-container {
+    min-height: 380px;
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    position: relative;
+    overflow: hidden;
+  }
+  .behold-placeholder {
+    position: absolute; inset: 0;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    gap: 12px; padding: 40px;
+    text-align: center;
+  }
+  .behold-placeholder-icon { font-size: 40px; opacity: 0.4; }
+  .behold-placeholder-text {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 15px; letter-spacing: 1px; color: var(--muted);
+  }
+  .behold-placeholder-note {
+    font-size: 12px; color: #3a3a35;
+    max-width: 360px; line-height: 1.6;
+  }
+  .behold-setup-badge {
+    background: var(--green-dim);
+    border: 1px solid var(--green);
+    padding: 8px 16px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 12px; letter-spacing: 2px; text-transform: uppercase;
+    color: var(--green-light);
+    margin-top: 8px;
+  }
+  /* ── HAMBURGER ── */
+  .nav-burger {
+    display: none;
+    flex-direction: column; gap: 5px;
+    background: none; border: none; cursor: pointer; padding: 4px;
+  }
+  .nav-burger span {
+    display: block; width: 24px; height: 2px;
+    background: var(--text);
+    transition: transform 0.2s, opacity 0.2s;
+  }
+  .nav-burger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .nav-burger.open span:nth-child(2) { opacity: 0; }
+  .nav-burger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+  @media (max-width: 900px) {
+    .nav-burger { display: flex; }
+    .nav-links {
+      display: none;
+      position: absolute; top: 100%; left: 0; right: 0;
+      flex-direction: column; gap: 0;
+      background: rgba(13,13,13,0.98);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+      padding: 8px 0;
+    }
+    .nav-links.open { display: flex; }
+    .nav-links li { border-bottom: 1px solid var(--border); }
+    .nav-links a {
+      display: block; padding: 16px 24px;
+      font-size: 14px; letter-spacing: 2px;
+    }
+    .nav-links .nav-cta {
+      margin: 12px 20px 8px;
+      text-align: center; padding: 14px !important;
+      background: var(--green) !important;
+      color: #fff !important;
+    }
+  }
+
+  /* ── TABLET ── */
+  @media (max-width: 900px) {
+    nav { padding: 14px 20px; }
+    .nav-links { display: none; }
+    section { padding: 56px 20px; }
+
+    /* Hero */
+    .hero { grid-template-columns: 1fr; min-height: auto; }
+    .hero-left { padding: 100px 20px 48px; }
+    .hero-right { height: 320px; }
+    .hero-stats { gap: 2px; padding: 0 12px; bottom: 20px; }
+    .stat-pill { padding: 10px 10px; }
+    .stat-num { font-size: 22px; }
+    .stat-label { font-size: 9px; }
+
+    /* Stats band */
+    .stats-band { grid-template-columns: 1fr 1fr; }
+    .band-stat { border-bottom: 1px solid var(--border); }
+
+    /* Services */
+    .services-layout { grid-template-columns: 1fr; gap: 24px; }
+
+    /* Equipos */
+    .equipos-grid { grid-template-columns: 1fr 1fr; }
+
+    /* Coverage */
+    .coverage-layout { grid-template-columns: 1fr; gap: 24px; }
+    .map-embed { height: 300px; }
+
+    /* Contact */
+    .contact-layout { grid-template-columns: 1fr; gap: 24px; }
+    .contact-box { padding: 28px 24px; }
+
+    /* Instagram */
+    .ig-header { flex-direction: column; align-items: flex-start; gap: 16px; }
+
+    /* Footer */
+    footer { flex-direction: column; gap: 16px; text-align: center; padding: 36px 20px; }
+  }
+
+  /* ── MOBILE ── */
+  @media (max-width: 540px) {
+    nav { padding: 12px 16px; }
+    section { padding: 48px 16px; }
+
+    /* Hero */
+    .hero-left { padding: 90px 16px 40px; }
+    .hero-title { font-size: 56px; }
+    .hero-subtitle { font-size: 22px; }
+    .hero-desc { font-size: 14px; }
+    .hero-actions { flex-direction: column; }
+    .btn-primary, .btn-ghost { width: 100%; justify-content: center; padding: 16px 24px; }
+    .hero-right { height: 260px; }
+    .hero-forklift-card { width: 85%; }
+    .hero-stats { flex-direction: row; flex-wrap: wrap; justify-content: center; gap: 4px; bottom: 12px; }
+    .stat-pill { flex: 0 0 calc(33% - 4px); padding: 8px 6px; }
+
+    /* Stats band */
+    .stats-band { grid-template-columns: 1fr 1fr; }
+    .band-stat { padding: 24px 20px; }
+    .band-stat-num { font-size: 36px; }
+
+    /* Section titles */
+    .section-title { font-size: 40px; }
+
+    /* Services */
+    .service-card { padding: 20px; }
+    .service-feature { padding: 28px 24px; }
+    .feature-title { font-size: 32px; }
+    .svc-num { font-size: 28px; min-width: 36px; }
+
+    /* Equipos */
+    .equipos-grid { grid-template-columns: 1fr; }
+    .equipo-visual { height: 160px; }
+
+    /* Coverage */
+    .map-embed { height: 260px; }
+    .map-badge { padding: 10px 14px; font-size: 12px; }
+    .coverage-item { padding: 16px; }
+
+    /* Contact */
+    .contact-box { padding: 24px 16px; }
+    .wa-button { width: 100%; justify-content: center; }
+
+    /* IG feed */
+    .behold-container { min-height: 280px; }
+
+    /* Footer */
+    footer { padding: 28px 16px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">
+    <div class="nav-logo-box">MG</div>
+    <div class="nav-logo-text">
+      MG Equipos Industriales<br>
+      <span>Autoelevadores · Entre Ríos</span>
+    </div>
+  </a>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="#servicios" onclick="closeMenu()">Servicios</a></li>
+    <li><a href="#equipos" onclick="closeMenu()">Equipos</a></li>
+    <li><a href="#cobertura" onclick="closeMenu()">Cobertura</a></li>
+    <li><a href="#instagram" onclick="closeMenu()">Instagram</a></li>
+    <li><a href="#contacto" class="nav-cta" onclick="closeMenu()">Contacto</a></li>
+  </ul>
+  <button class="nav-burger" id="nav-burger" onclick="toggleMenu()" aria-label="Menú">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left">
+    <div class="hero-eyebrow">General Ramírez · Entre Ríos</div>
+    <h1 class="hero-title">
+      MG<br><span class="accent">Equipos</span><br>Industriales
+    </h1>
+    <p class="hero-subtitle">Autoelevadores</p>
+    <p class="hero-desc">
+      Servicio técnico especializado en equipos industriales y autoelevadores.
+      Mantenimiento preventivo y correctivo, transmisiones, mecánica e hidráulica.
+      Alquiler y repuestos en Entre Ríos.
+    </p>
+    <div class="hero-actions">
+      <a href="https://api.whatsapp.com/send?phone=+5493435050000" class="btn-primary">
+        💬 Consultá por WhatsApp
+      </a>
+      <a href="#servicios" class="btn-ghost">Ver servicios →</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-grid-bg"></div>
+    <div class="hero-image-panel">
+      <div class="hero-forklift-card">
+        <div class="hero-card-img">🏭</div>
+        <div class="hero-card-body">
+          <div class="hero-card-tag">Servicio Técnico Especializado</div>
+          <div class="hero-card-name">Autoelevadores Toyota</div>
+          <div class="hero-card-loc">📍 Gral. Ramírez, Entre Ríos</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-stats">
+      <div class="stat-pill">
+        <span class="stat-num">+6</span>
+        <span class="stat-label">Años de experiencia</span>
+      </div>
+      <div class="stat-pill">
+        <span class="stat-num">437</span>
+        <span class="stat-label">Trabajos realizados</span>
+      </div>
+      <div class="stat-pill">
+        <span class="stat-num">24/7</span>
+        <span class="stat-label">Atención urgente</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS BAND -->
+<div class="stats-band">
+  <div class="band-stat">
+    <span class="band-stat-num">+<em>6</em></span>
+    <span class="band-stat-label">Años de experiencia</span>
+    <p class="band-stat-desc">Servicios técnicos en toda la región</p>
+  </div>
+  <div class="band-stat">
+    <span class="band-stat-num"><em>437</em></span>
+    <span class="band-stat-label">Trabajos documentados</span>
+    <p class="band-stat-desc">En autoelevadores, prensas y maquinaria</p>
+  </div>
+  <div class="band-stat">
+    <span class="band-stat-num">2<em>4/7</em></span>
+    <span class="band-stat-label">Atención por WhatsApp</span>
+    <p class="band-stat-desc">Urgencias y consultas sin horario</p>
+  </div>
+  <div class="band-stat">
+    <span class="band-stat-num"><em>∞</em></span>
+    <span class="band-stat-label">Marcas compatibles</span>
+    <p class="band-stat-desc">Toyota, Heli, Clark, Yale, Hyster y más</p>
+  </div>
+</div>
+
+<!-- SERVICIOS -->
+<section id="servicios">
+  <div class="section-tag">Lo que hacemos</div>
+  <h2 class="section-title">Servicios<br>Técnicos</h2>
+  <p class="section-lead">Soluciones integrales para el mantenimiento y operación de tus equipos industriales y autoelevadores.</p>
+
+  <div class="services-layout reveal">
+    <div class="service-cards">
+      <div class="service-card active" onclick="setActive(this, 0)">
+        <div class="svc-num">01</div>
+        <div>
+          <div class="svc-title">Servicio Preventivo</div>
+          <div class="svc-desc">Mantenimiento programado para maximizar la vida útil del equipo.</div>
+        </div>
+      </div>
+      <div class="service-card" onclick="setActive(this, 1)">
+        <div class="svc-num">02</div>
+        <div>
+          <div class="svc-title">Servicio Correctivo</div>
+          <div class="svc-desc">Diagnóstico y reparación de fallas mecánicas, eléctricas e hidráulicas.</div>
+        </div>
+      </div>
+      <div class="service-card" onclick="setActive(this, 2)">
+        <div class="svc-num">03</div>
+        <div>
+          <div class="svc-title">Transmisiones</div>
+          <div class="svc-desc">Reparación y ajuste de transmisiones automáticas y mecánicas.</div>
+        </div>
+      </div>
+      <div class="service-card" onclick="setActive(this, 3)">
+        <div class="svc-num">04</div>
+        <div>
+          <div class="svc-title">Hidráulica</div>
+          <div class="svc-desc">Centrales hidráulicas, cilindros, válvulas y sistemas de presión.</div>
+        </div>
+      </div>
+      <div class="service-card" onclick="setActive(this, 4)">
+        <div class="svc-num">05</div>
+        <div>
+          <div class="svc-title">Alquiler y Repuestos</div>
+          <div class="svc-desc">Autoelevadores disponibles para alquiler y stock de repuestos.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="service-feature" id="feature-panel">
+      <div class="feature-icon" id="feat-icon">🔧</div>
+      <div class="feature-title" id="feat-title">Servicio Preventivo</div>
+      <div class="feature-body" id="feat-body">
+        El mantenimiento preventivo es la clave para evitar paradas inesperadas en tus operaciones. 
+        Realizamos inspecciones periódicas, cambios de fluidos, ajuste de frenos, verificación de horquillas 
+        y revisión integral del sistema eléctrico y mecánico de tu autoelevador.
+      </div>
+      <div class="feature-tags" id="feat-tags">
+        <span class="tag">Toyota</span>
+        <span class="tag">Heli</span>
+        <span class="tag">Clark</span>
+        <span class="tag">Yale</span>
+        <span class="tag">Hyster</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="h-rule">
+
+<!-- EQUIPOS -->
+<section id="equipos">
+  <div class="section-tag">Con qué trabajamos</div>
+  <h2 class="section-title">Equipos &<br>Marcas</h2>
+  <p class="section-lead">Experiencia en las principales marcas del mercado de autoelevadores y maquinaria industrial.</p>
+
+  <div class="equipos-grid reveal">
+    <div class="equipo-card">
+      <div class="equipo-visual">🚜</div>
+      <div class="equipo-body">
+        <div class="equipo-type">Autoelevador</div>
+        <div class="equipo-name">Toyota</div>
+        <div class="equipo-info">Service preventivo y correctivo certificado. Repuestos originales disponibles.</div>
+      </div>
+    </div>
+    <div class="equipo-card">
+      <div class="equipo-visual">⚙️</div>
+      <div class="equipo-body">
+        <div class="equipo-type">Autoelevador</div>
+        <div class="equipo-name">Heli</div>
+        <div class="equipo-info">Reparación mecánica, hidráulica y eléctrica. Amplio stock de repuestos.</div>
+      </div>
+    </div>
+    <div class="equipo-card">
+      <div class="equipo-visual">🏗️</div>
+      <div class="equipo-body">
+        <div class="equipo-type">Maquinaria</div>
+        <div class="equipo-name">Maquinaria Agrícola</div>
+        <div class="equipo-info">Mecánica integral, hidráulica y transmisiones para equipos del campo.</div>
+      </div>
+    </div>
+    <div class="equipo-card">
+      <div class="equipo-visual">🔩</div>
+      <div class="equipo-body">
+        <div class="equipo-type">Industrial</div>
+        <div class="equipo-name">Prensas Hidráulicas</div>
+        <div class="equipo-info">Reparación y mantenimiento de centrales hidráulicas industriales.</div>
+      </div>
+    </div>
+    <div class="equipo-card">
+      <div class="equipo-visual">⚡</div>
+      <div class="equipo-body">
+        <div class="equipo-type">Sistemas</div>
+        <div class="equipo-name">Eléctrico / Electrónico</div>
+        <div class="equipo-info">Diagnóstico y reparación de sistemas eléctricos industriales.</div>
+      </div>
+    </div>
+    <div class="equipo-card">
+      <div class="equipo-visual">🔄</div>
+      <div class="equipo-body">
+        <div class="equipo-type">Transmisiones</div>
+        <div class="equipo-name">Automáticas y Manuales</div>
+        <div class="equipo-info">Diagnóstico, reparación y ajuste de transmisiones de todo tipo.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="h-rule">
+
+<!-- COBERTURA -->
+<section id="cobertura">
+  <div class="section-tag">Dónde operamos</div>
+  <h2 class="section-title">Zona de<br>Cobertura</h2>
+  <p class="section-lead">Basados en General Ramírez, con servicio técnico en toda la región de Entre Ríos y zonas limítrofes.</p>
+
+  <div class="coverage-layout reveal">
+    <div class="map-wrapper" style="margin-top:0;">
+      <div class="map-badge">
+        <div class="map-badge-dot"></div>
+        <div class="map-badge-text">
+          MG Equipos Industriales<br>
+          <small>General Ramírez, Entre Ríos</small>
+        </div>
+      </div>
+      <iframe
+        class="map-embed"
+        src="https://maps.google.com/maps?q=General+Ram%C3%ADrez,+Entre+R%C3%ADos,+Argentina&z=13&output=embed"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Ubicación MG Equipos Industriales"
+        style="border:0;"
+      ></iframe>
+    </div>
+
+    <div class="coverage-info">
+      <div class="coverage-item">
+        <div class="coverage-icon">🏭</div>
+        <div>
+          <div class="coverage-item-title">Servicio en Taller</div>
+          <div class="coverage-item-desc">Recibimos tu equipo en nuestro taller en General Ramírez para reparaciones completas con todos los recursos disponibles.</div>
+        </div>
+      </div>
+      <div class="coverage-item">
+        <div class="coverage-icon">🚐</div>
+        <div>
+          <div class="coverage-item-title">Servicio a Domicilio</div>
+          <div class="coverage-item-desc">Nos desplazamos hasta tu empresa en Entre Ríos y zonas aledañas. Ideal para servicios preventivos y diagnósticos.</div>
+        </div>
+      </div>
+      <div class="coverage-item">
+        <div class="coverage-icon">📦</div>
+        <div>
+          <div class="coverage-item-title">Repuestos y Alquiler</div>
+          <div class="coverage-item-desc">Stock de repuestos para las principales marcas. Autoelevadores disponibles para alquiler en la región.</div>
+        </div>
+      </div>
+      <div class="coverage-item">
+        <div class="coverage-icon">🕐</div>
+        <div>
+          <div class="coverage-item-title">Urgencias</div>
+          <div class="coverage-item-desc">Atención de urgencias para minimizar el tiempo de parada de tu operación. Consultá disponibilidad.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="h-rule">
+
+<!-- INSTAGRAM EN VIVO -->
+<section id="instagram">
+  <div class="section-tag">Seguinos</div>
+  <h2 class="section-title">Instagram</h2>
+  <p class="section-lead">Los últimos trabajos, novedades y el día a día del taller directo desde el feed.</p>
+
+  <div class="ig-feed-wrapper reveal">
+    <div class="ig-header">
+      <div class="ig-profile-info">
+        <div class="ig-avatar">MG</div>
+        <div>
+          <div class="ig-name">@mgequiposindustriales</div>
+          <div class="ig-stats-row">437 publicaciones &nbsp;·&nbsp; 408 seguidores</div>
+        </div>
+      </div>
+      <a href="https://instagram.com/mgequiposindustriales" target="_blank" class="ig-open-btn">
+        Ver perfil completo →
+      </a>
+    </div>
+
+    <!-- BEHOLD.SO WIDGET — reemplazá YOUR_FEED_ID con el ID real -->
+    <!-- Pasos: 1) Creá cuenta en behold.so  2) Conectá @mgequiposindustriales  3) Copiá el Feed ID -->
+    <div class="behold-container" id="behold-mount">
+      <div class="behold-placeholder" id="behold-placeholder">
+        <div class="behold-placeholder-icon">📸</div>
+        <div class="behold-placeholder-text">Feed de Instagram en vivo</div>
+        <div class="behold-placeholder-note">
+          Para activar el feed real, conectá la cuenta en <strong style="color:var(--green-light)">behold.so</strong> 
+          (gratis) y reemplazá <code style="color:var(--orange);font-size:11px">YOUR_FEED_ID</code> en el código.
+          El widget carga automáticamente las últimas publicaciones.
+        </div>
+        <div class="behold-setup-badge">Requiere activación · 5 min</div>
+      </div>
+    </div>
+    <!-- Una vez que tenés el Feed ID, descomentá esta línea y borrá el placeholder de arriba: -->
+    <!-- <behold-widget feed-id="YOUR_FEED_ID"></behold-widget> -->
+    <!-- <script src="https://w.behold.so/widget.js" type="module"></script> -->
+  </div>
+</section>
+
+<hr class="h-rule">
+
+<!-- CONTACTO -->
+<section id="contacto">
+  <div class="section-tag">Estamos para ayudarte</div>
+  <h2 class="section-title">Contacto</h2>
+  <p class="section-lead">Contanos qué equipo tenés y coordinamos.</p>
+
+  <div class="contact-layout reveal">
+    <div class="contact-box">
+      <div class="contact-box-title">Hablemos</div>
+      <div class="contact-box-desc">Contanos qué equipo tenés, qué síntoma presenta, y coordinamos una visita o te hacemos llegar un presupuesto.</div>
+
+      <div class="contact-detail">
+        <div class="contact-detail-icon">📍</div>
+        <div>
+          <div class="contact-detail-label">Ubicación</div>
+          <div class="contact-detail-val">General Ramírez, Entre Ríos</div>
+        </div>
+      </div>
+      <div class="contact-detail">
+        <div class="contact-detail-icon">📱</div>
+        <div>
+          <div class="contact-detail-label">WhatsApp</div>
+          <div class="contact-detail-val">+54 9 343 505-XXXX</div>
+        </div>
+      </div>
+      <div class="contact-detail">
+        <div class="contact-detail-icon">🕐</div>
+        <div>
+          <div class="contact-detail-label">Horario</div>
+          <div class="contact-detail-val">Lunes a Viernes · Ver horarios en Instagram</div>
+        </div>
+      </div>
+
+      <a href="https://api.whatsapp.com/send?phone=+549343505" class="wa-button">
+        <span class="wa-icon">💬</span>
+        Enviar mensaje por WhatsApp
+      </a>
+    </div>
+
+    <div style="background:var(--bg2); border:1px solid var(--border); overflow:hidden;">
+      <div class="map-badge" style="position:relative; top:auto; left:auto; border:none; border-bottom:1px solid var(--border); border-radius:0;">
+        <div class="map-badge-dot"></div>
+        <div class="map-badge-text">Cómo llegar al taller<br><small>General Ramírez, Entre Ríos</small></div>
+      </div>
+      <iframe
+        src="https://maps.google.com/maps?q=General+Ram%C3%ADrez,+Entre+R%C3%ADos,+Argentina&z=15&output=embed"
+        style="width:100%; height:340px; border:0; display:block;"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Cómo llegar a MG Equipos Industriales"
+      ></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div>
+    <div class="footer-brand">MG <span>Equipos Industriales</span></div>
+    <div class="footer-info" style="margin-top: 6px;">General Ramírez, Entre Ríos · Argentina</div>
+  </div>
+  <div class="footer-info" style="text-align:center;">
+    Autoelevadores · Mecánica · Hidráulica<br>Transmisiones · Alquiler · Repuestos
+  </div>
+  <div class="footer-copy">
+    Seguinos en Instagram<br>@mgequiposindustriales
+  </div>
+</footer>
+
+<script>
+function toggleMenu() {
+  const links = document.getElementById('nav-links');
+  const burger = document.getElementById('nav-burger');
+  links.classList.toggle('open');
+  burger.classList.toggle('open');
+}
+function closeMenu() {
+  document.getElementById('nav-links').classList.remove('open');
+  document.getElementById('nav-burger').classList.remove('open');
+}
+
+// Service feature data
+const features = [
+  {
+    icon: '🔧',
+    title: 'Servicio Preventivo',
+    body: 'El mantenimiento preventivo es la clave para evitar paradas inesperadas en tus operaciones. Realizamos inspecciones periódicas, cambios de fluidos, ajuste de frenos, verificación de horquillas y revisión integral del sistema eléctrico y mecánico de tu autoelevador.',
+    tags: ['Toyota', 'Heli', 'Clark', 'Yale', 'Hyster']
+  },
+  {
+    icon: '🛠️',
+    title: 'Servicio Correctivo',
+    body: 'Diagnosticamos y reparamos todo tipo de fallas mecánicas, eléctricas e hidráulicas. Contamos con herramientas de diagnóstico profesional y taller equipado para resolver cualquier problema en el menor tiempo posible.',
+    tags: ['Diagnóstico', 'Reparación', 'Frenos', 'Motor', 'Eléctrico']
+  },
+  {
+    icon: '⚙️',
+    title: 'Transmisiones',
+    body: 'Especialistas en transmisiones automáticas y manuales para autoelevadores y maquinaria industrial. Reparación, ajuste y reemplazo de componentes con garantía de trabajo.',
+    tags: ['Automáticas', 'Manuales', 'Torque Converter', 'Caja']
+  },
+  {
+    icon: '💧',
+    title: 'Hidráulica Especializada',
+    body: 'Reparación de centrales hidráulicas, cilindros de elevación, válvulas de control y sistemas de dirección hidráulica. Amplia experiencia en hidráulica industrial y de maquinaria agrícola.',
+    tags: ['Centrales', 'Cilindros', 'Válvulas', 'Bombas', 'Presión']
+  },
+  {
+    icon: '📦',
+    title: 'Alquiler y Repuestos',
+    body: 'Autoelevadores disponibles para alquiler en la región de Entre Ríos. Además contamos con stock de repuestos para las principales marcas del mercado para agilizar cualquier reparación.',
+    tags: ['Alquiler', 'Repuestos', 'Toyota', 'Heli', 'Stock']
+  }
+];
+
+function setActive(card, index) {
+  document.querySelectorAll('.service-card').forEach(c => c.classList.remove('active'));
+  card.classList.add('active');
+  const f = features[index];
+  document.getElementById('feat-icon').textContent = f.icon;
+  document.getElementById('feat-title').textContent = f.title;
+  document.getElementById('feat-body').textContent = f.body;
+  const tagsEl = document.getElementById('feat-tags');
+  tagsEl.innerHTML = f.tags.map(t => `<span class="tag">${t}</span>`).join('');
+}
+
+// Scroll reveal
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) e.target.classList.add('visible');
+  });
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
